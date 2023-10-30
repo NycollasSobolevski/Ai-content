@@ -35,7 +35,7 @@ for (int g = 0; g < 1000; g++)
         .MaxBy(b => fitness[b.i])
         .n;
     Console.WriteLine($"x = {bestX}, fitness = {max}");
-    
+
 
     var sum = fitness.Sum(b => b);
     List<byte> parents = new List<byte>();
@@ -47,7 +47,7 @@ for (int g = 0; g < 1000; g++)
             next -= fitness[j];
             if (next > 0)
                 continue;
-            
+
             parents.Add(population[j]);
         }
     }
@@ -73,7 +73,7 @@ for (int g = 0; g < 1000; g++)
     {
         if (Random.Shared.NextSingle() > m)
             continue;
-        
+
         int k = Random.Shared.Next(8);
         var bit = 1 << k;
         population[i] = (byte)(population[i] ^ bit);

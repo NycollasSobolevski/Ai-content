@@ -34,14 +34,11 @@ public class CarController
 
     public void Control()
     {
-        Car.StartAccelerate();
-        Car.Move(-0.001f);
-        Car.TurnLeft();
+        // ??
     }
 
     public float FitnessFunction()
     {
         // ??
-        return 0f;
     }
 }
